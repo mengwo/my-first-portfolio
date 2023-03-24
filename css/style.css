@@ -1,0 +1,269 @@
+/*ELEMENT STARTS HERE*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: neue-haas-grotesk-display;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .05em;
+}
+
+a:hover{
+    background-color: #28282b;    
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(68, 63, 133);
+    color: #ffffe0;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+   
+}
+/*ELEMENT ENDS HERE*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+/*CLASSES STARTS HERE*/
+.main-container{
+    background-color: #E6E6FA;
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template: 0.15fr 1fr 1fr 1fr 1fr 0.10fr / 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "about"
+    "contact"
+    "myresume"
+    "footer";
+}
+.mobile{
+    display:none;
+}
+.header-container{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(68, 63, 133);
+    color: #ffffe0;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+    
+}
+
+.header-inside-myname{  
+    font-size: 26px;
+}
+
+.nav-link-container{
+    list-style-type: none;
+    display: flex;
+    gap: 8em;
+    font-size: 16px;
+}
+.nav-link-container a{
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: #ffffe0;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-inside-job {
+    font-size:26px;
+}
+
+/*HOME STARTS HERE*/
+
+.home-container{
+    grid-area: main;
+    display: flex;
+    color: black;
+}
+
+.home-container section{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+}
+
+.h1-container{
+    font-size: 100px;
+}
+.h2-container{
+    font-size: 50px;
+
+}
+.button-info-container{
+    font-size: 25px;
+}
+.button-container a{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+}
+.button-container a:hover{
+    color: white;
+}
+/*ABOUT STARTS HERE*/
+.about-container{
+    grid-area: about;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+
+}
+.about-container section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    color: black;
+    width: 100vw;
+}
+.section-h1{
+    font-size: 32px;
+}
+.info-container{
+    width: 1000px;
+    font-size: 24px;
+    text-align: justify;
+}
+
+/*CONTACTS START HERE*/
+.contacts-container{
+    grid-area: contact;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.contacts-container section{
+    font-size: 32px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: 1em;
+
+}
+.icon-links{
+    margin-top: 150px;
+    display: flex;
+    gap: 1em;
+}
+.icon-links a{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: black;
+    border-radius: 50px;
+}
+.icon-links a:hover{
+    color: white;
+}
+/*MYRESUME STARTS HERE*/
+.myresume-container{
+    width: 100vw;
+    background-color: aliceblue;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+.myresume-container a{
+    grid-area: myresume;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: black;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+.myresume-container a:hover{
+    background-color: #28282b;
+    color: #ffffe0;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+    
+    
+}
+/*CLASSES ENDS HERE*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 600px){
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .main-container{
+        grid-template: 100px 1fr 1fr 1fr 1fr 50px / 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "about"
+        "contact"
+        "myresume"
+        "footer";
+    }
+    .section-h1{
+        font-size: 30px;
+    }
+    .header-inside-left-container{
+        display: none;
+    }
+    .nav-link-container{
+        display: none;
+
+    }
+    .h1-container{
+        font-size: 30px;
+    }
+    .h2-container{
+        font-size: 30px;
+        text-align: center;
+    }
+    .info-container{
+        width: 500px;
+    }
+    .contacts-h1{
+        font-size:30px;
+    }
+    .address{
+        font-size: 15px;
+    }
+    .mobile{
+        display: flex;
+        align-items: center;
+    }
+    .header-inside-left-mobile{
+        margin-right: 300px;
+    }
+    .header-bars-container{
+        margin-left: 100px;
+        font-size: 36px;
+        
+    }
+}
+
+/*MEDIA Screen*/
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
